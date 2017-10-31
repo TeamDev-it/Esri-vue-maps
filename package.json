@@ -1,1 +1,9 @@
-{}
+{
+    "name": "teamdev.esri.vue",
+    "version": "4.5",
+    "private": true,
+    "dependencies": {
+        "esri-loader": "1.1.0",
+        "@types/arcgis-js-api": "^4.5.0"
+    }
+}

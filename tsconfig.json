@@ -1,0 +1,28 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "outDir": "./bin/ts-out",
+        "rootDir": "src",
+        "allowJs": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "target": "es2015",
+        "noImplicitReturns": true,
+        "typeRoots": [
+            "node_modules/**/types",
+            "node_modules/@types",
+            "src/@types"
+        ],
+        "lib": ["dom", "es2015", "es2015.promise"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./src/**/*"
+    ]
+}
