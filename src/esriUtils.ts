@@ -3,8 +3,27 @@ import Vue, { WatchOptions } from "vue";
 import { ArrayObserver } from "./Observers/ObservableArray";
 import { Esri } from "./Esri";
 
+declare let window: any;
+
 export class Loader {
   static isloading: Promise<any>;
+
+  static packageName: string = "esri";
+
+  static remapPrefix(prefix: string, uri: string) {
+    Loader.packageName = prefix;
+
+    window.dojoConfig = {
+      async: true,
+      packages: [
+        {
+          name: prefix,
+          location: uri
+        }
+      ],
+      has: { "dojo-preload-i18n-Api": false }
+    };
+  }
 
   static initialize(url: string = "https://js.arcgis.com/4.5/") {
     if (!this.isloading) {
